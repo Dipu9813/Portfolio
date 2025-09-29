@@ -8,24 +8,6 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-/*---------------------------navbar link click handling ---------------------------*/
-navLinks.forEach(link => {
-    link.onclick = () => {
-        // Remove active class from all links
-        navLinks.forEach(navLink => {
-            navLink.classList.remove('active');
-        });
-        // Add active class to clicked link
-        link.classList.add('active');
-        
-        // Close mobile menu when link is clicked
-        if(window.innerWidth <= 768) {
-            menuIcon.classList.remove('fa-xmark');
-            navbar.classList.remove('active');
-        }
-    };
-});
-
 /*---------------------------scroll section active link ---------------------------*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -38,11 +20,9 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if(top >= offset && top < offset + height) {
-            // Remove active class from all nav links
             navLinks.forEach(links => {
                 links.classList.remove('active');
             });
-            // Add active class to current section's nav link
             if(id) {
                 let activeLink = document.querySelector('header nav a[href*=' + id + ']');
                 if(activeLink) {
@@ -51,16 +31,13 @@ window.onscroll = () => {
             }
         }
     });
-    
     /*---------------------------sticky nav bar ---------------------------*/
     let header = document.querySelector('header');
     header.classList.toggle('sticky',window.scrollY > 100);
 
-    /*---------------------------remove toggle icon and navbar on scroll (mobile only) ---------------------------*/
-    if(window.innerWidth <= 768) {
-        menuIcon.classList.remove('fa-xmark');
-        navbar.classList.remove('active');
-    }
+    /*---------------------------remove toggle icon and navbar ---------------------------*/
+    menuIcon.classList.remove('fa-xmark');
+    navbar.classList.remove('active');
 
 };
 
@@ -72,7 +49,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'buttom' });
 ScrollReveal().reveal('.home-content h1, .about-img, h2', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
