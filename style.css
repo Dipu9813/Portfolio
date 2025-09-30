@@ -356,6 +356,98 @@ span {
     cursor: pointer;
 }
 
+.contact-info {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--snd-bg-color);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    border: .2rem solid transparent;
+    transition: .3s ease;
+    min-width: 25rem;
+}
+
+.contact-item:hover {
+    border-color: var(--main-color);
+    transform: translateY(-.5rem);
+    box-shadow: 0 .5rem 1rem rgba(89, 178, 244, 0.3);
+}
+
+.contact-item i {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(89, 178, 244, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 0;
+    font-weight: 600;
+}
+
+.copy-item {
+    cursor: pointer;
+    position: relative;
+}
+
+.copy-item:hover {
+    background: rgba(89, 178, 244, 0.1);
+}
+
+.copy-item.copied {
+    background: rgba(89, 178, 244, 0.3);  /* Blue theme color */
+    border-color: var(--main-color);      /* Your main theme color */
+}
+
+.copy-tooltip {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--main-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.copy-tooltip.show {
+    opacity: 1;
+}
+
+.copy-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.5rem solid transparent;
+    border-top-color: var(--main-color);
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -416,6 +508,20 @@ span {
 
     .contact {
         min-height: auto;
+    }
+
+    .contact-info {
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .contact-item {
+        min-width: 100%;
+        padding: 1.5rem 2rem;
+    }
+
+    .contact-item h4 {
+        font-size: 1.6rem;
     }
 
     .footer {
