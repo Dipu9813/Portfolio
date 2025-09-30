@@ -13,19 +13,6 @@ A clean and responsive personal portfolio website showcasing web development pro
 - **Contact Form**: Functional contact section
 - **Social Media Links**: Connect through various platforms
 
-## 📁 Project Structure
-
-```
-portfolio/
-├── index.html          # Main HTML file
-├── style.css          # Stylesheet with responsive design
-├── main.js            # JavaScript for interactions and animations
-├── photos/            # Images folder
-│   ├── profile.jpg    # Profile picture
-│   └── aboutpic.jpg   # About section image
-└── README.md          # Project documentation
-```
-
 ## 🚀 Sections
 
 ### Home
