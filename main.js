@@ -61,3 +61,11 @@ const typed = new Typed('.multiple-text',{
     backDelay: 1000,
     loop: true,
 });
+
+/*------------------- open PDF file ----------------------*/
+document.querySelector('.download-btn').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default link behavior
+    
+    // Open PDF in a new tab
+    window.open('assets/Dipesh_Singh_CV.pdf', '_blank');
+});
