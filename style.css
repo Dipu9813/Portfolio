@@ -319,6 +319,16 @@ span {
     margin-bottom: 3rem;
 }
 
+.contact-description {
+    text-align: left;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.1rem;
+}
+
 .contact form {
     max-width: 70rem;
     margin: 1rem auto;
@@ -356,13 +366,13 @@ span {
     cursor: pointer;
 }
 
+
 .contact-info {
     margin-top: 4rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .contact-item {
@@ -374,7 +384,8 @@ span {
     border-radius: 1rem;
     border: .2rem solid transparent;
     transition: .3s ease;
-    min-width: 25rem;
+    width: 32rem;
+    max-width: 100%;
 }
 
 .contact-item:hover {
