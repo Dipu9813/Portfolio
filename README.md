@@ -130,7 +130,7 @@ A clean and responsive personal portfolio website showcasing web development pro
 Feel free to reach out for any questions or collaboration opportunities!
 
 - GitHub: [@Dipu9813](https://github.com/Dipu9813)
-- Email: [dipruc06@gmail.com]
+- Email: [mail@singhdipesh.com.np]
 - LinkedIn: [https://www.linkedin.com/in/dipesh-singh-31255533a/]
 
 ---
